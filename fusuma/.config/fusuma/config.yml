@@ -1,0 +1,4 @@
+swipe:
+  3:
+    right:
+      sendkey: "LEFTMETA+RIGHT"

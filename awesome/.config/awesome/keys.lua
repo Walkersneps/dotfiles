@@ -427,7 +427,7 @@ keys.globalkeys = gears.table.join(
 
     -- Screenkey toggle
     awful.key( { superkey }, "F12", apps.screenkey,
-        {description = "raise volume", group = "volume"}),
+        {description = "activate screenkey", group = "volume"}),
 
     -- Microphone (V for voice)
     awful.key( { superkey }, "v",
@@ -473,7 +473,6 @@ keys.globalkeys = gears.table.join(
         {description = "mpv previous song", group = "media"}),
     awful.key({ superkey, shiftkey}, "space", function() awful.spawn.with_shell("mpvc toggle") end,
         {description = "mpv toggle pause/play", group = "media"}),--]]
-
     --[[
     awful.key({ superkey }, "F8", function() awful.spawn.with_shell("mpvc quit") end,
         {description = "mpv quit", group = "media"}),
@@ -487,7 +486,7 @@ keys.globalkeys = gears.table.join(
     -- Max layout
     -- Single tap: Set max layout
     -- Double tap: Also disable floating for ALL visible clients in the tag
-    awful.key({ superkey }, "w",
+    --[[awful.key({ superkey }, "w",
         function()
             awful.layout.set(awful.layout.suit.max)
             helpers.single_double_tap(
@@ -499,7 +498,7 @@ keys.globalkeys = gears.table.join(
                     end
                 end)
         end,
-        {description = "set max layout", group = "tag"}),
+        {description = "set max layout", group = "tag"}),--]]
 
     --Floating terminal rapido
     --[[awful.key({}, superkey,
@@ -718,6 +717,8 @@ keys.clientkeys = gears.table.join(
 
     -- Close client
     awful.key({ superkey, shiftkey   }, "q",      function (c) c:kill() end,
+        {description = "close", group = "client"}),
+    awful.key({ superkey }, "w",      function (c) c:kill() end,
         {description = "close", group = "client"}),
     awful.key({ altkey }, "F4",      function (c) c:kill() end,
         {description = "close", group = "client"}),

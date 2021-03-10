@@ -140,6 +140,7 @@ end)
 local calendar_box = create_boxed_widget(calendar, dpi(300), dpi(400), x.background)
 -- local calendar_box = create_boxed_widget(calendar, 380, 540, x.color0)
 
+-- Disk Space Widget
 local disk_arc = wibox.widget {
     start_angle = 3 * math.pi / 2,
     min_value = 0,
@@ -247,12 +248,13 @@ local function create_bookmark(name, path, color, hover_color)
 end
 
 local bookmarks = wibox.widget {
-    create_bookmark("home", os.getenv("HOME"), x.color1, x.color9),
-    create_bookmark("downloads", user.dirs.downloads, x.color2, x.color10),
-    create_bookmark("music", user.dirs.music, x.color6, x.color14),
-    create_bookmark("pictures", user.dirs.pictures, x.color4, x.color12),
-    create_bookmark("wallpapers", user.dirs.wallpapers, x.color5, x.color13),
-    create_bookmark("screenshots", user.dirs.screenshots, x.color3, x.color11),
+    create_bookmark("Home", os.getenv("HOME"), x.color1, x.color9),
+    create_bookmark("Download", user.dirs.downloads, x.color2, x.color10),
+    create_bookmark("Documenti", user.dirs.documents, x.color6, x.color14),
+    --create_bookmark("music", user.dirs.music, x.color6, x.color14),
+    create_bookmark("Immagini", user.dirs.pictures, x.color5, x.color13),
+    --create_bookmark("wallpapers", user.dirs.wallpapers, x.color4, x.color12),
+    create_bookmark("Screenshots", user.dirs.screenshots, x.color3, x.color11),
     spacing = dpi(10),
     layout = wibox.layout.fixed.vertical
 }

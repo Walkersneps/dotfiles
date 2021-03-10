@@ -80,7 +80,7 @@ user = {
     terminal = "xterm",
     floating_terminal = "kitty -1",
     browser = "firefox",
-    file_manager = "kitty -1 --class files -e ranger",
+    file_manager = "thunar",
     editor = "kitty -1 --class editor -e vim",
     email_client = "kitty -1 --class email -e neomutt",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
@@ -94,13 +94,13 @@ user = {
 
     -- Directories with fallback values
     dirs = {
-        downloads = os.getenv("XDG_DOWNLOAD_DIR") or "/media/storage/Walter/walter_Dowloads",
+        downloads = os.getenv("XDG_DOWNLOAD_DIR") or "/media/storage/Walter/walter_Downloads",
         documents = os.getenv("XDG_DOCUMENTS_DIR") or "/media/storage/Walter/walter_Documenti",
         music = os.getenv("XDG_MUSIC_DIR") or "/media/storage/Walter/walter_Musica",
         pictures = os.getenv("XDG_PICTURES_DIR") or "/media/storage/Walter/walter_Immagini",
         videos = os.getenv("XDG_VIDEOS_DIR") or "/media/storage/Walter/walter_Video",
-        -- Make sure the directory exists so that your screenshots
-        -- are not lost
+        
+        -- Make sure the directory exists so that your screenshots are not lost
         screenshots = os.getenv("XDG_SCREENSHOTS_DIR") or "/media/storage/Walter/Screenshots",
     },
 

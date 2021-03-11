@@ -548,11 +548,7 @@ keys.globalkeys = gears.table.join(
                                  end,
         {description = "App drawer", group = "custom"}),
 
-    -- Pomodoro timer
-    awful.key({ superkey }, "slash", function()
-        awful.spawn.with_shell("pomodoro")
-                                     end,
-        {description = "pomodoro", group = "launcher"}),
+        
     -- Spawn file manager
     awful.key({ superkey }, "F2", apps.file_manager,
         {description = "file manager", group = "launcher"}),

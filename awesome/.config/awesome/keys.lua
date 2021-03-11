@@ -514,11 +514,12 @@ keys.globalkeys = gears.table.join(
     ),--]]
 
     -- Tiling
-    -- Single tap: Set tiled layout
+    -- Single tap: Toggle Layout
     -- Double tap: Also disable floating for ALL visible clients in the tag
     awful.key({ superkey }, "s",
         function()
-            awful.layout.set(awful.layout.suit.tile)
+            --awful.layout.set(awful.layout.suit.tile)
+            awful.layout.inc(1)
             helpers.single_double_tap(
                 nil,
                 function()
@@ -534,6 +535,8 @@ keys.globalkeys = gears.table.join(
         awful.layout.set(awful.layout.suit.floating)
                                            end,
         {description = "set floating layout", group = "tag"}),
+
+        
     -- Dashboard
     awful.key({ superkey }, "F1", function()
         if dashboard_show then
@@ -548,7 +551,7 @@ keys.globalkeys = gears.table.join(
                                  end,
         {description = "App drawer", group = "custom"}),
 
-        
+
     -- Spawn file manager
     awful.key({ superkey }, "F2", apps.file_manager,
         {description = "file manager", group = "launcher"}),

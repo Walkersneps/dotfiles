@@ -1,0 +1,8 @@
+#!/bin/bash
+
+STR="This is a broadcast!"
+
+echo "Please type text you want to broadcast!"
+read STR
+
+echo $STR | wall

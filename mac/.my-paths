@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Standard PATH locations
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+
+# Add user-specific bin directory to path
+export PATH="$PATH:$HOME/Applications/bin"
+
+# Add Maven
+export PATH="$PATH:/opt/apache-maven-3.3.9/bin"
+
+# Add go
+export PATH="$PATH:/usr/local/go/bin"
+
+# Add GnuPG
+export PATH="$PATH:/usr/local/MacGPG2/bin"
+
+# Add GO executables
+export PATH="$PATH:$GOPATH/bin"
+
+# Add Swiftenv
+export SWIFTENV_ROOT="$HOME/.swiftenv"
+export PATH="$PATH:$SWIFTENV_ROOT/bin"
+eval "$(swiftenv init -)"
+
+
+# Set MANPATH
+export MANPATH="/usr/local/man:$MANPATH"

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+#####################################################
+#  _____ _____ __  __ ____  
+# |_   _| ____|  \/  |  _ \ 
+#   | | |  _| | |\/| | |_) |
+#   | | | |___| |  | |  __/ 
+#   |_| |_____|_|  |_|_|    
+#
+# AWESOME SCRIPT TO MEASURE PROCESSOR TEMPERATURE
+#To see GPU temperature, the user executing the program requires to be in group 'video'
+#Please comment out the last line if you're not in group "video".
+#
+####################################################
+
+_temp () {
+	if [ "$#" -eq 0 ]; then
+		cpuTemp0=$(cat /sys/class/thermal/thermal_zone0/temp)
+		cpuTemp1=$(($cpuTemp0/1000))
+		cpuTemp2=$(($cpuTemp0/100))
+		cpuTempM=$(($cpuTemp2 % $cpuTemp1))
+
+		echo CPU temp"="$cpuTemp1"."$cpuTempM"'C"
+		echo GPU $(/opt/vc/bin/vcgencmd measure_temp)
+	else
+		echo " "
+		echo "  _____ _____ __  __ ____  "
+		echo " |_   _| ____|  \/  |  _ \ "
+		echo "   | | |  _| | |\/| | |_) |"
+		echo "   | | | |___| |  | |  __/ "
+		echo "   |_| |_____|_|  |_|_|    "
+		echo " "
+		echo "Temp: gives CPU and GPU temperatures"
+		echo " "
+		echo "Usage: temp"
+		echo "If given any argument, temp will show this help dialog"
+		echo " "
+	fi
+}
+
+_temp "$@"

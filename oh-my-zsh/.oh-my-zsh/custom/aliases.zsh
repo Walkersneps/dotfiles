@@ -14,4 +14,4 @@ alias open="xdg-open"
 
 #### ARCH SPECIFIC ####
 # All-flags makepkg
-alias ompk="makepkg -"
+alias mkpkg="makepkg -sri && echo 'Se necessario, installa il pacchetto con pacman -U'"

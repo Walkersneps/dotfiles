@@ -111,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/snap/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+# Static Objects (dove cerca per es. Python)
+export LD_LIBRARY_PATH=/usr/local/lib
 
 # Scelta Cursore
 #echo -e -n "\x1b[\x30 q" # changes to blinking block

@@ -9,3 +9,9 @@ alias awrc="nano $DOTFILES_DIR/awesome/.config/awesome/rc.lua"
 
 # xdg-open alias
 alias open="xdg-open"
+
+
+
+#### ARCH SPECIFIC ####
+# All-flags makepkg
+alias ompk="makepkg -"

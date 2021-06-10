@@ -38,7 +38,7 @@ local tags = {
 		layout = awful.layout.suit.floating,
 		gap = 0
 	},
-	{
+	--[[{
 		type = 'games',
 		icon = icons.games,
 		default_app = apps.default.game,
@@ -57,7 +57,7 @@ local tags = {
 		default_app = apps.default.sandbox,
 		layout = awful.layout.suit.max,
 		gap = 0
-	},
+	},]]--
 	{
 		type = 'any',
 		icon = icons.development,

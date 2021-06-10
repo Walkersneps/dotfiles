@@ -10,9 +10,9 @@ return {
 		-- Default web browser
 		web_browser = 'firefox',
 		-- Default text editor
-		text_editor = 'subl3',
+		text_editor = 'gedit',
 		-- Default file manager
-		file_manager = 'dolphin',
+		file_manager = 'thunar',
 		-- Default media player
 		multimedia = 'vlc',
 		-- Default game, can be a launcher like steam
@@ -22,7 +22,7 @@ return {
 		-- Default sandbox
 		sandbox = 'virtualbox',
 		-- Default IDE
-		development = '',
+		development = 'code',
 		-- Default network manager
 		network_manager = 'kitty iwctl',
 		-- Default bluetooth manager
@@ -57,7 +57,7 @@ return {
 		-- Blueman applet
 		'blueman-applet',
 		-- Music server
-		'mpd',
+		--'mpd',
 		-- Polkit and keyring
 		'/usr/bin/lxqt-policykit-agent &' ..
 		' eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',

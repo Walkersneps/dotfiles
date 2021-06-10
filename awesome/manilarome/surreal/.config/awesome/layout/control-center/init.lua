@@ -140,6 +140,7 @@ local main_control_row_sliders = wibox.widget {
 	)
 }
 
+--[[
 local main_control_music_box = wibox.widget {
 	layout = wibox.layout.fixed.vertical,
 	format_item(
@@ -150,6 +151,7 @@ local main_control_music_box = wibox.widget {
 		}
 	)
 }
+--]]
 
 local monitor_control_row_progressbars = wibox.widget {
 	layout = wibox.layout.fixed.vertical,
@@ -189,7 +191,7 @@ local control_center = function(s)
 							spacing = dpi(10),
 							main_control_row_two,
 							main_control_row_sliders,
-							main_control_music_box
+							--main_control_music_box
 						},
 						{
 							id = 'monitor_control',

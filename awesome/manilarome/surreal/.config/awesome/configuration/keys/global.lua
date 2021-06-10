@@ -112,13 +112,13 @@ local global_keys = awful.util.table.join(
 	),
 	awful.key(
 		{modkey}, 
-		'w', 
+		'Left', 
 		awful.tag.viewprev, 
 		{description = 'view previous tag', group = 'tag'}
 	),
 	awful.key(
 		{modkey}, 
-		's', 
+		'Right', 
 		awful.tag.viewnext, 
 		{description = 'view next tag', group = 'tag'}
 	),
@@ -548,7 +548,28 @@ for i = 1, 9 do
 				end
 			end,
 			descr_toggle_focus
-		)
+		)--,
+
+
+
+		-- ## MIE AGGIUNTE ##
+		--[[
+		-- tag successivo
+		awful.key(
+			{modkey},
+			"Right",
+			function()
+				awful.tag.viewnext(mouse.screen)
+			end
+		),
+		-- tag precedente
+		awful.key(
+			{modkey},
+			"Left",
+			function()
+				awful.tag.viewprev(mouse.screen)
+			end
+		)]]--
 	)
 end
 

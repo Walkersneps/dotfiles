@@ -1,4 +1,15 @@
 swipe:
-  3:
+  4:
     right:
-      sendkey: "LEFTMETA+RIGHT"
+      command: "xdotool key super+Left"
+    left:
+      command: "xdotool key super+Right"
+    up:
+      command: "xdotool key shift+super+x"
+pinch:
+  3:
+    in:
+      command: "xdotool key shift+super+x"
+  4:
+    in:
+      command: "xdotool key super+e"

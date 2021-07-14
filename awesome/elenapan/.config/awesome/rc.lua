@@ -76,12 +76,13 @@ local exit_screen_theme = exit_screen_themes[2]
 user = {
     -- >> Default applications <<
     -- Check apps.lua for more
-    --terminal = "kitty -1",
-    terminal = "xterm",
+    terminal = "kitty -1",
+    --terminal = "xterm",
     floating_terminal = "kitty -1",
     browser = "firefox",
-    file_manager = "thunar",
-    editor = "kitty -1 --class editor -e vim",
+    --file_manager = "thunar",
+    file_manager = "dolphin",
+    editor = "kitty -1 --class editor -e nano",
     email_client = "kitty -1 --class email -e neomutt",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
 

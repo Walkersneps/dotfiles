@@ -12,7 +12,7 @@ return {
 		-- Default text editor
 		text_editor = 'gedit',
 		-- Default file manager
-		file_manager = 'thunar',
+		file_manager = 'dolphin',
 		-- Default media player
 		multimedia = 'vlc',
 		-- Default game, can be a launcher like steam

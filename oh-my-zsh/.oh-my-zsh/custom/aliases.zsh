@@ -45,6 +45,12 @@ alias open="xdg-open"
 ##############################################
 
 
+#### KITTY ####
+# Invia terminfo di kitty in connessione ssh
+alias kssh="kitty +kitten ssh"
+##############################################
+
+
 
 #### ARCH SPECIFIC ####
 # All-flags makepkg
